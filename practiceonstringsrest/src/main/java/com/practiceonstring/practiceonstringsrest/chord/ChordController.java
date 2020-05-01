@@ -9,6 +9,7 @@ public class ChordController {
     @Autowired
     private ChordRepository chordRepo;
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping
     public @ResponseBody Iterable<Chord> getAllChords(){
         return chordRepo.findAll();
@@ -20,11 +21,13 @@ public class ChordController {
         return chordRepo.findById(chordId).get();
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping
     public @ResponseBody int addNewChord(@RequestBody Chord chord){
         return chordRepo.save(chord).getId();
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping
     public @ResponseBody String updateChord(@RequestBody Chord chord){
         return chordRepo.save(chord).getChordName();
