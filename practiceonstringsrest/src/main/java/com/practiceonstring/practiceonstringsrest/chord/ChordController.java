@@ -14,6 +14,7 @@ public class ChordController {
         return chordRepo.findAll();
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping(path = "/{chordId}")
     public Chord getChord(@PathVariable int chordId){
         return chordRepo.findById(chordId).get();
