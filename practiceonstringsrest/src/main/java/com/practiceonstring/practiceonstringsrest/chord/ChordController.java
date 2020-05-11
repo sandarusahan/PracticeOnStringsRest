@@ -33,7 +33,8 @@ public class ChordController {
         return chordRepo.save(chord).getChordName();
     }
 
-    @DeleteMapping(params = "/{chordId}")
+    @CrossOrigin(origins = "http://localhost:4200")
+    @DeleteMapping(path = "/{chordId}")
     public @ResponseBody String deleteChord(@PathVariable int chordId){
         chordRepo.deleteById(chordId);
         return "Deleted";

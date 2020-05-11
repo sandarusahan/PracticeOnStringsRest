@@ -1,7 +1,5 @@
 package com.practiceonstring.practiceonstringsrest.ChordType;
 
-import com.practiceonstring.practiceonstringsrest.chord.Chord;
-import com.practiceonstring.practiceonstringsrest.chord.ChordRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
